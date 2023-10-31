@@ -8,18 +8,20 @@ using namespace std;
 class Human {
 private:
     string MobilePhone;
+    string AdressOfLive;
 public:
     int Age;
     string Name;
     
-    Human(int Age, string Name, string MobilePhone) :Age{ Age }, Name{ Name }, MobilePhone{MobilePhone} {}
-    Human():Human(0,"None","None"){}
+    Human(int Age, string Name, string MobilePhone, string AdressOfLive) :Age{ Age }, Name{ Name }, MobilePhone{ MobilePhone }, AdressOfLive{AdressOfLive} {}
+    Human():Human(0,"None","None","None") {}
 
     void input() {
         system("cls");
         cout << "Введите имя:"; cin >> Name;
         cout << "Введите возраст:"; cin >> Age;
         cout << "Введите номер телефона:"; cin >> MobilePhone;
+        cout << "Введите Адресс проживания:"; cin >> AdressOfLive;
         system("cls");
 
     }
@@ -30,6 +32,7 @@ public:
         cout << "Имя:" << Name << endl;
         cout << "Возраст:" << Age << endl;
         cout << "Номер телефона:" << MobilePhone << endl;
+        cout << "Адрес проживания:" << AdressOfLive << endl;
         cout << endl << endl << endl;
     }
 };
